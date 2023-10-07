@@ -5,6 +5,7 @@ import { AuthService } from "../../../shared/axios";
 import { IGenericResponse } from "../../../interfaces/common";
 
 const createStudent = async (req: Request) => {
+    // console.log("create student",req.body);
     const file = req.file as IUploadFile;
     const uploadedImage = await FileUploadHelper.uploadToCloudinary(file);
 
